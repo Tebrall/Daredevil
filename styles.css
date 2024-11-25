@@ -22,7 +22,7 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     overflow-x: hidden;
-    background-image: url('/Users/user/Desktop/Daredevil/dare1.jpg');
+    background-image: url('pics/dare1.jpg');
     background-size: cover;
     background-attachment: fixed;
 }
@@ -135,7 +135,7 @@ header nav ul li a:hover::after {
     left: -50%;
     width: 200%;
     height: 100%;
-    background-image: url('/Users/user/Desktop/Daredevil/dare1.jpg');
+    background-image: url('pics/dare1.jpg');
     background-size: contain;
     background-repeat: repeat;
     opacity: 0.2;
@@ -143,8 +143,13 @@ header nav ul li a:hover::after {
 }
 
 @keyframes moveBackground {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
 }
 
 .hero-content h1 {
@@ -158,8 +163,15 @@ header nav ul li a:hover::after {
 }
 
 @keyframes textPop {
-    0% { transform: scale(0.8); opacity: 0; }
-    100% { transform: scale(1); opacity: 1; }
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .hero-content h1 span {
@@ -239,8 +251,15 @@ header nav ul li a:hover::after {
 }
 
 @keyframes heroImageBounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
 }
 
 /* About Section */
@@ -318,7 +337,7 @@ header nav ul li a:hover::after {
     left: -50%;
     width: 200%;
     height: 100%;
-    background-image: url('/Users/user/Desktop/Daredevil/dare1.jpg');
+    background-image: url('pics/dare1.jpg');
     background-size: contain;
     background-repeat: repeat;
     opacity: 0.05;
@@ -326,8 +345,13 @@ header nav ul li a:hover::after {
 }
 
 @keyframes scrollBackground {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 .tokenomics-content {
@@ -357,16 +381,16 @@ header nav ul li a:hover::after {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: conic-gradient(
-        transparent,
-        rgba(255, 255, 255, 0.3),
-        transparent 30%
-    );
+    background: conic-gradient(transparent,
+            rgba(255, 255, 255, 0.3),
+            transparent 30%);
     animation: rotate 4s linear infinite;
 }
 
 @keyframes rotate {
-    100% { transform: rotate(1turn); }
+    100% {
+        transform: rotate(1turn);
+    }
 }
 
 .token-card:hover {
@@ -381,9 +405,17 @@ header nav ul li a:hover::after {
 }
 
 @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 .token-card h3 {
@@ -518,7 +550,11 @@ header nav ul li a:hover::after {
         padding: 10px 20px;
     }
 
-    #about h2, #tokenomics h2, #roadmap h2, #memes h2, #community h2 {
+    #about h2,
+    #tokenomics h2,
+    #roadmap h2,
+    #memes h2,
+    #community h2 {
         font-size: 36px;
     }
 
@@ -555,7 +591,7 @@ header nav ul li a:hover::after {
     left: -50%;
     width: 200%;
     height: 100%;
-    background-image: url('/Users/user/Desktop/Daredevil/dare1.jpg');
+    background-image: url('pics/dare1.jpg');
     background-size: contain;
     background-repeat: repeat;
     opacity: 0.05;
@@ -563,8 +599,13 @@ header nav ul li a:hover::after {
 }
 
 @keyframes moveBackground {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 #roadmap h2 {
@@ -687,7 +728,7 @@ header nav ul li a:hover::after {
 }
 
 .timeline-item p {
-    font-size: 18px; 
+    font-size: 18px;
     color: var(--text-color);
 }
 
@@ -761,8 +802,13 @@ header nav ul li a:hover::after {
 }
 
 @keyframes spinIcon {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* Scroll Button for Roadmap Phases */
@@ -1116,7 +1162,11 @@ footer .footer-nav ul li a:hover::after {
         font-size: 30px;
     }
 
-    #about h2, #tokenomics h2, #roadmap h2, #memes h2, #community h2 {
+    #about h2,
+    #tokenomics h2,
+    #roadmap h2,
+    #memes h2,
+    #community h2 {
         font-size: 40px;
     }
 
@@ -1149,7 +1199,11 @@ footer .footer-nav ul li a:hover::after {
         padding: 10px 20px;
     }
 
-    #about h2, #tokenomics h2, #roadmap h2, #memes h2, #community h2 {
+    #about h2,
+    #tokenomics h2,
+    #roadmap h2,
+    #memes h2,
+    #community h2 {
         font-size: 30px;
     }
 
