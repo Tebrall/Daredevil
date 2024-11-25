@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Mobile menu toggle
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const mobileMenu = document.querySelector('.mobile-menu');
@@ -27,12 +27,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Scroll reveal animations
     function reveal() {
         const reveals = document.querySelectorAll('.reveal');
-        
+
         reveals.forEach((reveal) => {
             const windowHeight = window.innerHeight;
             const elementTop = reveal.getBoundingClientRect().top;
             const elementVisible = 150;
-            
+
             if (elementTop < windowHeight - elementVisible) {
                 reveal.classList.add('active');
             } else {
