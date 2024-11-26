@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Tokenomics counter animation
-    const tokenCards = document.querySelectorAll('.token-card');
+    const tokenCards = document.querySelectorAll('.token-card1');
     tokenCards.forEach(card => {
         const countElement = card.querySelector('p');
         const targetCount = parseInt(countElement.innerText.replace(/,/g, ''), 10);

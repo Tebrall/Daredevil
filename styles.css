@@ -291,6 +291,15 @@ header nav ul li a:hover::after {
     text-align: center;
 }
 
+#tokenomics h2 {
+    font-family: var(--comic-font);
+    font-size: 60px;
+    color: var(--secondary-color);
+    text-shadow: 3px 3px var(--primary-color), 5px 5px #000;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
 .about-content {
     display: flex;
     align-items: center;
@@ -374,7 +383,33 @@ header nav ul li a:hover::after {
     overflow: hidden;
 }
 
+.token-card1 {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    width: 250px;
+    border-radius: 20px;
+    text-align: center;
+    border: 5px double var(--accent-color);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
 .token-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(transparent,
+            rgba(255, 255, 255, 0.3),
+            transparent 30%);
+    animation: rotate 4s linear infinite;
+}
+
+.token-card1::before {
     content: '';
     position: absolute;
     top: -50%;
@@ -397,7 +432,18 @@ header nav ul li a:hover::after {
     transform: translateY(-10px) rotate(-3deg);
 }
 
+.token-card1:hover {
+    transform: translateY(-10px) rotate(-3deg);
+}
+
 .token-card i {
+    font-size: 60px;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    animation: pulse 2s infinite;
+}
+
+.token-card1 i {
     font-size: 60px;
     color: var(--secondary-color);
     margin-bottom: 20px;
@@ -425,7 +471,20 @@ header nav ul li a:hover::after {
     margin-bottom: 15px;
 }
 
+.token-card1 h3 {
+    font-family: var(--comic-font);
+    font-size: 28px;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
 .token-card p {
+    font-size: 22px;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.token-card1 p {
     font-size: 22px;
     color: var(--text-color);
     font-weight: bold;
@@ -611,7 +670,7 @@ header nav ul li a:hover::after {
 #roadmap h2 {
     font-family: var(--comic-font);
     font-size: 60px;
-    color: var(--accent-color);
+    color: var(--secondary-color);
     text-shadow: 3px 3px var(--primary-color), 5px 5px #000;
     margin-bottom: 50px;
     text-align: center;
@@ -690,8 +749,8 @@ header nav ul li a:hover::after {
     border-radius: 10px;
     display: inline-block;
     position: relative;
-    border: 3px dashed var(--accent-color);
-    box-shadow: 5px 5px 0 var(--primary-color);
+    border: 3px dashed var(--secondary-color);
+    box-shadow: 5px 5px 0 var(--secondary-color);
     transition: all 0.3s ease;
 }
 
@@ -723,7 +782,7 @@ header nav ul li a:hover::after {
 .timeline-item h3 {
     font-family: var(--comic-font);
     font-size: 28px;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     margin-bottom: 10px;
 }
 
@@ -743,34 +802,49 @@ header nav ul li a:hover::after {
     box-shadow: none;
 }
 
-/* Roadmap - Mobile Enhancements */
 @media (max-width: 768px) {
     .roadmap-timeline::before {
         display: none;
+        /* Hide the central line on mobile */
     }
 
     .timeline-item {
         width: 100%;
-        left: 0;
-        padding-left: 80px;
-        padding-right: 20px;
-        text-align: left;
-        opacity: 1;
-        transform: translateY(0);
+        /* Make each item take full width */
+        text-align: center;
+        /* Center-align content */
+        padding: 20px 0;
+        /* Add even spacing */
+        position: relative;
+        /* Reset positioning */
     }
 
     .timeline-item .timeline-icon {
-        left: auto;
-        right: auto;
+        margin: 0 auto 20px;
+        /* Center the icon */
         position: static;
-        margin: 0 auto 10px;
+        /* Remove left/right positioning */
     }
 
     .timeline-item .timeline-content {
+        margin: 0 auto;
+        /* Center the content */
         text-align: center;
-        padding: 20px;
+        /* Ensure text is centered */
+    }
+
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        left: 0;
+        /* Ensure no offset */
+    }
+
+    .timeline-item .timeline-content::before {
+        display: none;
+        /* Remove the directional arrow */
     }
 }
+
 
 /* Roadmap Divider Line - Enhanced */
 .roadmap-timeline::before {
