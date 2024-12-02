@@ -23,8 +23,22 @@ const navLinks = document.querySelectorAll('.nav-links a'); // Select all anchor
 
 
 hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active'); // Toggle visibility of menu
+
     hamburger.classList.toggle('active'); // Toggle hamburger animation
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active'); // Toggle visibility of menu
+            hamburger.classList.toggle('active'); // Toggle hamburger animation
+        });
+    } else {
+        console.error('Element not found:', { hamburger, navLinks });
+    }
 });
 
 
